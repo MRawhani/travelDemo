@@ -936,4 +936,26 @@ a{
         margin-bottom: 0;
     }
 
+.site-footer {
+    background-color: var(--mainBlue);
+    color: #fff;
+    padding: .5rem 0;
+    text-align: center;
+}
+
+.site-footer--text {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 200;
+    }
+
+@media (min-width: 800px){
+
+.site-footer--text {
+            display: inline;
+            margin-bottom: 0;
+            margin-right: 3rem
+    }
+    }
+
 
