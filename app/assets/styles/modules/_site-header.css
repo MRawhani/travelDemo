@@ -6,6 +6,10 @@
 	transition: background-color .3s ease-out;
 	@mixin atMedium{
 		background-color: rgba(#2f5572, .3);
+		position: fixed;
+		&--dark{
+			background-color: rgba(23,51,72, .85);
+		}
 	}
 	&--is-expanded{
 		background-color: rgba(#2f5572,.55)
@@ -25,10 +29,14 @@
 		transform-origin: 50% 0; /*styling our header part2 minute:7*/
 		background-color: var(--mainBlue);
 		padding: 25px 36px;
+		transition: transform .3s ease-out;
 		
 		@mixin atMedium{
 			left: auto;
 			transform: translateX(0);
+			.site-header--dark & {
+				transform: scale(.5);
+			}
 		}
 	}
 
