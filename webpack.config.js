@@ -1,10 +1,13 @@
 var path = require('path'); //path is part of node
 //the objects following are creatred by us
 module.exports = {
-    entry: "./app/assets/scripte/App.js",
+    entry: {
+        App: "./app/assets/scripte/App.js",
+        Vendor: "./app/assets/scripte/Vendor.js",
+    },
     output: {
         path: path.resolve(__dirname, "./app/temp/scripts"),
-        filename: "App.js"
+        filename: "[name].js"
     },
     module: {
         loaders: [{
