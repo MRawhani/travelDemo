@@ -524,6 +524,10 @@ a{
         max-width: 976px; 
     }
 
+.wrapper--narrow{
+        max-width: 425px;
+    }
+
 .wrapper .wrapper{
         padding-left: 0;
         padding-right: 0;
@@ -859,6 +863,11 @@ a{
 
 .section-title--blue{
         color: var(--mainBlue)
+    }
+
+.section-title--less-margin{
+        margin-bottom: 1.3rem;
+        margin-top: 0;
     }
 
 .feature-item{
@@ -1240,5 +1249,92 @@ a{
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal{
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .94);
+    top:0%;
+    bottom:0%;
+    right:0%;
+    left:0%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);/*zoom out when hidden and zoom in when visible*/
+    transition: all .3s ease-out;
+}
+
+.modal--inner{
+       position: absolute;
+       width:100%;
+       top: 50%;
+       -webkit-transform: translateY(-50%);
+               transform: translateY(-50%);
+    
+   }
+
+.modal--is-visible{
+       opacity: 1;
+       visibility: visible;
+       -webkit-transform: scale(1);
+               transform: scale(1);
+
+   }
+
+.modal--description{
+        text-align: center;
+        font-size: 1.3rem;
+       font-weight:300;
+       line-height:1.7;
+    }
+
+.modal--close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        -webkit-transform: scaleX(1.5);
+                transform: scaleX(1.5);
+        -webkit-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+        cursor: pointer;
+        color: var(--mainBlue);
+    }
+
+.modal--close:hover{
+            color: var(--mainOrange);
+        }
+
+.social-icons{
+    text-align: center;
+}
+
+.social-icons--icon{
+        background-color: var(--mainOrange);
+        display: inline-block;
+        margin: 0 5px 5px 5px;
+        width: 33%;
+        height: 62px;
+        position: relative;
+    }
+
+@media (min-width: 530px){
+
+.social-icons--icon{
+            width: 62px;
+            margin: 0 5px
+    }
+    }
+
+.social-icons--icon .icon{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+          
+        }
 
 

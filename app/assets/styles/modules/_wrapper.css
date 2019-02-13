@@ -10,6 +10,9 @@
     &--medium{
         max-width: 976px; 
     }
+    &--narrow{
+        max-width: 425px;
+    }
     .wrapper{
         padding-left: 0;
         padding-right: 0;
