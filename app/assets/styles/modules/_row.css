@@ -1,4 +1,4 @@
-.row {
+ .row {
 
     @mixin clearfix;
 
@@ -93,7 +93,7 @@
     }
     
     /*Equal height Rules*/
-    &--equal-height-at-medium {
+    .flexbox &--equal-height-at-medium {
         @mixin atMedium {
             display: flex;
 
@@ -103,7 +103,8 @@
             }
         }
     }
-    &--equal-height-at-large {
+    .flexbox &--equal-height-at-medium {
+        &--equal-height-at-large {
         @mixin atLarge {
             display: flex;
 
@@ -115,3 +116,4 @@
     }
 
 }
+ }
